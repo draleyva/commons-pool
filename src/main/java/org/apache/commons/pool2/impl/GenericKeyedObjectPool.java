@@ -1189,7 +1189,7 @@ implements KeyedObjectPool<K,T>, GenericKeyedObjectPoolMXBean<K> {
     }
 
     @Override
-    void ensureMinIdle() throws Exception {
+    public void ensureMinIdle() throws Exception {
         final int minIdlePerKeySave = getMinIdlePerKey();
         if (minIdlePerKeySave < 1) {
             return;
@@ -1208,7 +1208,7 @@ implements KeyedObjectPool<K,T>, GenericKeyedObjectPoolMXBean<K> {
      *
      * @throws Exception If a new object is required and cannot be created
      */
-    private void ensureMinIdle(final K key) throws Exception {
+    public void ensureMinIdle(final K key) throws Exception {
         // Calculate current pool objects
         ObjectDeque<T> objectDeque = poolMap.get(key);
 

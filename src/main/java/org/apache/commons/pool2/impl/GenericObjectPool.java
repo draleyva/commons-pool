@@ -929,7 +929,7 @@ public class GenericObjectPool<T> extends BaseGenericObjectPool<T>
     }
 
     @Override
-    void ensureMinIdle() throws Exception {
+    public void ensureMinIdle() throws Exception {
         ensureIdle(getMinIdle(), true);
     }
 

@@ -736,7 +736,7 @@ public abstract class BaseGenericObjectPool<T> extends BaseObject {
      * available in the pool.
      * @throws Exception if an error occurs creating idle instances
      */
-    abstract void ensureMinIdle() throws Exception;
+    public abstract void ensureMinIdle() throws Exception;
 
 
     // Monitoring (primarily JMX) related methods
